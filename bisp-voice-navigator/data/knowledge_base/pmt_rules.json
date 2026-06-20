@@ -1,0 +1,31 @@
+{
+  "cutoff_score": 32,
+  "programs": {
+    "kafaalat": {
+      "stipend": 14500,
+      "eligibility": {
+        "max_pmt": 32,
+        "requires_female_head": true,
+        "marital_status_allowed": [
+          "Married",
+          "Widowed",
+          "Divorced"
+        ]
+      }
+    },
+    "nashonuma": {
+      "stipends": {
+        "plw_or_male_child": 2500,
+        "female_child": 3000
+      },
+      "eligibility": {
+        "max_pmt": 32,
+        "requires_kafaalat_eligible": true,
+        "target_groups": [
+          "PLW",
+          "Children_under_2"
+        ]
+      }
+    }
+  }
+}

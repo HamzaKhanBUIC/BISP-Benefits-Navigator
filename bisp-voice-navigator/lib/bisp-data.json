@@ -1,0 +1,84 @@
+{
+  "pmt_rules": {
+    "kafaalat": {
+      "standard_pmt_cutoff": 32,
+      "pwd_pmt_cutoff": 37,
+      "quarterly_stipend_pkr": 14500
+    },
+    "taleemi_wazaif": {
+      "primary": {
+        "age_limit_years": {
+          "min": 4,
+          "max": 12
+        },
+        "boy_stipend_pkr": 2500,
+        "girl_stipend_pkr": 3000,
+        "graduation_bonus_girls_pkr": 3000
+      },
+      "secondary": {
+        "age_limit_years": {
+          "min": 8,
+          "max": 18
+        },
+        "boy_stipend_pkr": 3500,
+        "girl_stipend_pkr": 4000
+      },
+      "higher_secondary": {
+        "age_limit_years": {
+          "min": 13,
+          "max": 22
+        },
+        "boy_stipend_pkr": 4500,
+        "girl_stipend_pkr": 5000
+      }
+    },
+    "nashonuma": {
+      "plw_stipend_pkr": 2500,
+      "male_child_under_2_stipend_pkr": 2500,
+      "female_child_under_2_stipend_pkr": 3000
+    },
+    "undergraduate_scholarship": {
+      "tuition_coverage_percent": 100,
+      "living_stipend_monthly_pkr": 4000
+    },
+    "bachat_scheme": {
+      "government_match_percent": 30
+    },
+    "fallbacks": {
+      "sehat_sahulat": {
+        "universal_coverage_provinces": [
+          "Khyber Pakhtunkhwa",
+          "Azad Jammu and Kashmir",
+          "Gilgit-Baltistan",
+          "Islamabad Capital Territory"
+        ],
+        "targeted_limited_coverage_provinces": [
+          "Punjab",
+          "Sindh",
+          "Balochistan"
+        ]
+      },
+      "akhuwat": {
+        "general_mandate": "Interest-free microfinance targeting poverty alleviation, household self-sufficiency, and enterprise development."
+      }
+    }
+  },
+  "sources_cited": [
+    "https://openknowledge.worldbank.org/entities/publication/bfcea87b-c32b-4b95-af54-f5e562847c1b",
+    "https://digitalrightsfoundation.pk/unveiling-the-human-side-of-data-the-journey-of-a-bisp-beneficiary-denied-ehsaas-programme-access/",
+    "https://en.wikipedia.org/wiki/Benazir_Income_Support_Programme",
+    "https://alfalahw.org/bisp-registration/",
+    "https://gcap.global/wp-content/uploads/2025/12/Country-Position-Paper-on-Social-protection-Pakistan.pdf",
+    "https://www.dawn.com/news/1974440",
+    "https://tribune.com.pk/story/2593300/bisp-increases-rs1000-cash-support-for-beneficiaries-from-1st-of-ramazan",
+    "https://ramzanpackage8070.pk/benazir-nashonuma-program/",
+    "https://www.nation.com.pk/10-Jul-2025/99pc-enrollment-target-for-benazir-taleemi-wazaif-achieved-in-punjab",
+    "https://nipapeshawar.gov.pk/KJPPM/PDF/CIP/P34.pdf",
+    "https://www.scribd.com/document/611915145/Taleemi-Wazaif-09162022",
+    "https://statehealth.com.pk/HealthCardPlus-KP",
+    "https://www.dawn.com/news/1969086",
+    "https://www.dawn.com/news/1921079",
+    "https://purdnet.files.wordpress.com/2017/10/pakistan-poverty-alleviation-programmes.pdf",
+    "https://nipapeshawar.gov.pk/KJPPM/PDF/CIP/38PSS/PSS3.pdf"
+  ]
+}
