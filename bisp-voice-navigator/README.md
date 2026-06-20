@@ -45,14 +45,14 @@ In Pakistan, millions of women living below the poverty line are eligible for th
 
 ```mermaid
 graph TD
-    A[User Speaks (Microphone)] -->|WebM Audio| B(Deepgram STT API)
-    B -->|Regional Transcript| C{Gemini 2.5 Flash}
-    C -->|Extracts Demographics| D[Node.js BISP Rules Engine]
-    D -->|Deterministic PMT Score| C
-    C -->|Dual-Language Response| E[Regex Stripper]
-    E -->|UI Display (Both)| F[Next.js Frontend]
-    E -->|Regional Text Only| G(ElevenLabs TTS API)
-    G -->|Warm, Empathetic Audio| H[User Listens]
+    A["User Speaks (Microphone)"] -->|"WebM Audio"| B("Deepgram STT API")
+    B -->|"Regional Transcript"| C{"Gemini 2.5 Flash"}
+    C -->|"Extracts Demographics"| D["Node.js BISP Rules Engine"]
+    D -->|"Deterministic PMT Score"| C
+    C -->|"Dual-Language Response"| E["Regex Stripper"]
+    E -->|"UI Display (Both)"| F["Next.js Frontend"]
+    E -->|"Regional Text Only"| G("ElevenLabs TTS API")
+    G -->|"Warm, Empathetic Audio"| H["User Listens"]
 ```
 
 ---
