@@ -7,24 +7,53 @@
     <strong>An AI-powered, voice-first civic technology pre-screener for the next billion users.</strong>
     <br />
     <br />
-    <a href="https://bisp-benefits-navigator-359691438955.us-central1.run.app"><strong>View Live Demo »</strong></a>
+    <a href="https://bisp-voice-navigator-359691438955.us-central1.run.app"><strong>View Live Demo »</strong></a>
+    ·
+    <a href="https://usaii-global-ai-hackathon-2026.devpost.com"><strong>USAII Hackathon 2026</strong></a>
     <br />
     <br />
   </p>
+
+  <p align="center">
+    <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js" alt="Next.js" /></a>
+    <a href="https://cloud.google.com/run"><img src="https://img.shields.io/badge/Google_Cloud_Run-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="GCP" /></a>
+    <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" /></a>
+    <a href="https://deepmind.google/technologies/gemini/"><img src="https://img.shields.io/badge/Gemini_2.5_Flash-FFD700?style=for-the-badge&logo=google&logoColor=black" alt="Gemini" /></a>
+    <a href="https://elevenlabs.io/"><img src="https://img.shields.io/badge/ElevenLabs-Audio-000000?style=for-the-badge" alt="ElevenLabs" /></a>
+  </p>
 </div>
 
-<p align="center">
-  <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js" alt="Next.js" /></a>
-  <a href="https://cloud.google.com/run"><img src="https://img.shields.io/badge/Google_Cloud_Run-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="GCP" /></a>
-  <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" /></a>
-  <a href="https://deepmind.google/technologies/gemini/"><img src="https://img.shields.io/badge/Gemini_2.5_Flash-FFD700?style=for-the-badge&logo=google&logoColor=black" alt="Gemini" /></a>
-</p>
+<br />
+
+<!-- 
+=========================================
+  HACKATHON SCREENSHOT PLACEHOLDERS
+=========================================
+-->
+<div align="center">
+  <br />
+  <!-- Replace this link below with a real screenshot of your app once you record the demo! -->
+  <img src="https://via.placeholder.com/800x400/0D1B2A/FFFFFF?text=BISP+Benefits+Navigator+Live+Demo" alt="App Screenshot Placeholder" width="100%" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+  <br />
+</div>
+
+---
+
+## 📑 Table of Contents
+
+- [The Mission](#-the-mission)
+- [Key Features](#-key-features)
+- [How it Works](#-how-it-works)
+- [Architecture Flow](#-architecture-flow)
+- [Tech Stack](#-tech-stack)
+- [Getting Started](#-getting-started)
+- [Responsible AI](#-responsible-ai)
 
 ---
 
 ## 🌍 The Mission
 
-In Pakistan, millions of women living below the poverty line are eligible for the Benazir Income Support Programme (BISP) but fail to access it due to a massive digital and literacy divide. Traditional web portals rely on complex dropdowns, legal jargon, and text-heavy forms. For a rural, illiterate woman, an online form is just as insurmountable as a closed door. 
+In Pakistan, millions of women living below the poverty line are eligible for the **Benazir Income Support Programme (BISP)** but fail to access it due to a massive digital and literacy divide. Traditional web portals rely on complex dropdowns, legal jargon, and text-heavy forms. For a rural, illiterate woman, an online form is just as insurmountable as a closed door. 
 
 **BISP Benefits Navigator** bridges this gap using AI. It allows citizens to determine their eligibility for social support simply by speaking in their native regional dialects. We didn't try to teach people how to use technology; we taught technology how to understand people.
 
@@ -34,10 +63,20 @@ In Pakistan, millions of women living below the poverty line are eligible for th
 
 - 🎙️ **Voice-First Interface**: A "Low-Literacy Dashboard" that strips away complex UI elements in favor of a single, massive glowing microphone button.
 - 🗣️ **Native Dialect Understanding**: Processes Urdu, Pashto, Punjabi, Sindhi, and Balochi naturally using the **Deepgram Nova-3 API** without destroying cultural nuance through legacy translation APIs.
-- 🧠 **Deterministic AI Rules Engine**: Instead of trusting an LLM to hallucinate math, Gemini is strictly forced to use a deterministic backend Rules Engine (`bisp-rules-engine.ts`) to calculate the Proxy Means Test (PMT) score based on 2026 guidelines.
+- 🧠 **Deterministic AI Rules Engine**: Instead of trusting an LLM to hallucinate math, Gemini is strictly forced to use a deterministic backend Rules Engine (`bisp-rules-engine.ts`) to calculate the Proxy Means Test (PMT) score based on exactly encoded 2026 guidelines.
 - 🛡️ **Anti-Abuse API Quota Shuffling**: An intelligent backend defense mechanism that catches `429 Quota Exceeded` errors from free-tier APIs and instantly rotates through an array of backup API keys, ensuring the app never crashes under heavy hackathon traffic.
 - 🌐 **Dual-Language Isolation**: The AI speaks exclusively in the user's regional language to maintain immersion, while the UI displays a side-by-side English translation for educated helpers or judges.
 - 🔒 **IP Rate Limiting**: Built-in `x-forwarded-for` memory map that strictly limits users to 10 requests per minute to prevent malicious API draining.
+
+---
+
+## 💡 How it Works
+
+1. **User Speaks**: A user speaks into their phone in a regional language (e.g. *"Mera naam Fatima hai. Meri income 8000 rupay hai."*).
+2. **Instant Translation**: Deepgram auto-detects the language and transcribes the speech to text instantly.
+3. **Smart Routing**: Gemini 2.5 Flash analyzes the demographics and identifies which of the **5 BISP Sub-Programs** (Kafaalat, Taleemi Wazaif, Nashonuma, etc.) applies to her specific situation.
+4. **Deterministic Math**: The Node.js Rules Engine crunches the numbers and outputs a highly accurate PMT score.
+5. **Empathetic Response**: ElevenLabs generates a warm, female voice responding in the exact language the user originally spoke.
 
 ---
 
@@ -86,6 +125,7 @@ To run this project locally, you will need Node.js 18+ and API keys for Google G
 ```bash
 git clone https://github.com/HamzaKhanBUIC/BISP-Benefits-Navigator.git
 cd BISP-Benefits-Navigator
+cd bisp-voice-navigator
 ```
 
 ### 2. Install dependencies
@@ -126,5 +166,7 @@ Because this application deals with government financial aid, we implemented str
 ---
 
 <div align="center">
-  Made with ❤️ for the women of Pakistan.
+  <br />
+  <p><strong>Built for the USAII Global AI Hackathon 2026</strong></p>
+  <p>Made with ❤️ for the women of Pakistan.</p>
 </div>
