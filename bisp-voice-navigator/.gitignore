@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore AI Agent files
+AGENTS.md
+CLAUDE.md
+FRONTEND_AGENTS.md
